@@ -3,25 +3,10 @@
 import { useState, useEffect } from 'react'
 import Image, { StaticImageData } from 'next/image'
 import { Star, Clock } from 'lucide-react'
-import paris from '@/static/paris.jpg'
-import tokyo from '@/static/tokyo.jpeg'
-import newyork from '@/static/newyork.jpg'
-import bali from '@/static/bali-tour.jpg'
-import africa from '@/static/africa.jpg'
-import rome from '@/static/Rome.jpg'
-import greek from '@/static/greek.jpg'
-import bangkok from '@/static/bangkok.jpg'
-import machu from '@/static/machu.jpg'
-import dubai from '@/static/dubai.jpg'
-import northlight from '@/static/northlight.jpg'
-import australia from '@/static/australia.jpg'
-import incatrail from '@/static/incatrail.jpg'
-import maldiveshopping from '@/static/maldiveshopping.jpg'
-import moroccan from '@/static/moroccan.jpeg'
 
 interface TourCardProps {
   title: string;
-  image: StaticImageData;
+  image: string;
   price: number;
   originalPrice?: number; // Added to store the original price before promotion
   rating: number;
@@ -105,27 +90,27 @@ const CountdownTimer = ({ endTime }: { endTime: string }) => {
 
 export default function Tours() {
   const bestSellers: TourCardProps[] = [
-    { title: "Paris Getaway", image: paris, price: 1299, rating: 4.8, link: "#", description: "Experience the City of Light with a romantic getaway to Paris." },
-    { title: "Tokyo Adventure", image: tokyo, price: 1599, rating: 4.9, link: "#", description: "Discover the vibrant culture and cutting-edge technology of Tokyo." },
-    { title: "New York City Tour", image: newyork, price: 999, rating: 4.7, link: "#", description: "Explore the iconic landmarks and bustling streets of the Big Apple." },
-    { title: "Bali Paradise", image: bali, price: 1099, rating: 4.8, link: "#", description: "Relax on the stunning beaches and immerse in the tranquil atmosphere of Bali." },
-    { title: "African Safari", image: africa, price: 2499, rating: 4.9, link: "#", description: "Embark on a thrilling adventure through the wild savannas of Africa." },
+    { title: "Paris Getaway", image: '/images/paris.jpg', price: 1299, rating: 4.8, link: "#", description: "Experience the City of Light with a romantic getaway to Paris." },
+    { title: "Tokyo Adventure", image: '/images/tokyo.jpeg', price: 1599, rating: 4.9, link: "#", description: "Discover the vibrant culture and cutting-edge technology of Tokyo." },
+    { title: "New York City Tour", image: '/images/newyork.jpg', price: 999, rating: 4.7, link: "#", description: "Explore the iconic landmarks and bustling streets of the Big Apple." },
+    { title: "Bali Paradise", image: '/images/bali-tour.jpg', price: 1099, rating: 4.8, link: "#", description: "Relax on the stunning beaches and immerse in the tranquil atmosphere of Bali." },
+    { title: "African Safari", image: '/images/africa.jpg', price: 2499, rating: 4.9, link: "#", description: "Embark on a thrilling adventure through the wild savannas of Africa." },
   ]
 
   const flashSales = [
-    { title: "Rome in a Week", image: rome, price: 899, originalPrice: 999, rating: 4.6, link: "#", endTime: "2024-12-01T23:59:59", description: "Explore the Eternal City's iconic landmarks and indulge in delicious Italian cuisine." },
-    { title: "Greek Islands Cruise", image: greek, price: 1399, originalPrice: 1599, rating: 4.7, link: "#", endTime: "2024-12-02T23:59:59", description: "Sail through the crystal-clear waters of the Aegean Sea and discover the charm of Greece's islands." },
-    { title: "Bangkok Foodie Tour", image: bangkok, price: 699, originalPrice: 799, rating: 4.5, link: "#", endTime: "2024-12-03T23:59:59", description: "Taste the flavors of Thailand on a culinary journey through Bangkok's bustling streets." },
-    { title: "Machu Picchu Trek", image: machu, price: 1799, originalPrice: 1999, rating: 4.8, link: "#", endTime: "2024-12-04T23:59:59", description: "Hike the Inca Trail to the mystical city of Machu Picchu, a true wonder of the ancient world." },
-    { title: "Dubai Luxury Experience", image: dubai, price: 2199, originalPrice: 2399, rating: 4.7, link: "#", endTime: "2024-12-05T23:59:59", description: "Live like royalty in Dubai, with luxurious accommodations and exclusive experiences." },
+    { title: "Rome in a Week", image: '/images/Rome.jpg', price: 899, originalPrice: 999, rating: 4.6, link: "#", endTime: "2024-12-01T23:59:59", description: "Explore the Eternal City's iconic landmarks and indulge in delicious Italian cuisine." },
+    { title: "Greek Islands Cruise", image: '/images/greek.jpg', price: 1399, originalPrice: 1599, rating: 4.7, link: "#", endTime: "2024-12-02T23:59:59", description: "Sail through the crystal-clear waters of the Aegean Sea and discover the charm of Greece's islands." },
+    { title: "Bangkok Foodie Tour", image: '/images/bangkok.jpg', price: 699, originalPrice: 799, rating: 4.5, link: "#", endTime: "2024-12-03T23:59:59", description: "Taste the flavors of Thailand on a culinary journey through Bangkok's bustling streets." },
+    { title: "Machu Picchu Trek", image: '/images/machu.jpg', price: 1799, originalPrice: 1999, rating: 4.8, link: "#", endTime: "2024-12-04T23:59:59", description: "Hike the Inca Trail to the mystical city of Machu Picchu, a true wonder of the ancient world." },
+    { title: "Dubai Luxury Experience", image: '/images/dubai.jpg', price: 2199, originalPrice: 2399, rating: 4.7, link: "#", endTime: "2024-12-05T23:59:59", description: "Live like royalty in Dubai, with luxurious accommodations and exclusive experiences." },
   ]
 
   const upcomingTours = [
-    { title: "Northern Lights Adventure", image: northlight, price: 2299, rating: 4.9, link: "#", description: "Witness the breathtaking spectacle of the Northern Lights in the Arctic wilderness." },
-    { title: "Australian Outback Journey", image: australia, price: 2599, rating: 4.8, link: "#", description: "Embark on a rugged adventure through the Australian Outback, exploring its unique landscapes and wildlife." },
-    { title: "Inca Trail Expedition", image: incatrail, price: 1899, rating: 4.7, link: "#", description: "Follow in the footsteps of the Incas on a challenging trek to Machu Picchu, Peru." },
-    { title: "Maldives Island Hopping", image: maldiveshopping, price: 2799, rating: 4.9, link: "#", description: "Relax on pristine beaches and snorkel in crystal-clear waters on a tropical island-hopping adventure." },
-    { title: "Moroccan Desert Safari", image: moroccan, price: 1599, rating: 4.6, link: "#", description: "Explore the vibrant souks and majestic dunes of Morocco on a thrilling desert safari." },
+    { title: "Northern Lights Adventure", image: '/images/northlight.jpg', price: 2299, rating: 4.9, link: "#", description: "Witness the breathtaking spectacle of the Northern Lights in the Arctic wilderness." },
+    { title: "Australian Outback Journey", image: '/images/australia.jpg', price: 2599, rating: 4.8, link: "#", description: "Embark on a rugged adventure through the Australian Outback, exploring its unique landscapes and wildlife." },
+    { title: "Inca Trail Expedition", image: '/images/incatrail.jpg', price: 1899, rating: 4.7, link: "#", description: "Follow in the footsteps of the Incas on a challenging trek to Machu Picchu, Peru." },
+    { title: "Maldives Island Hopping", image: '/images/maldiveshopping.jpg', price: 2799, rating: 4.9, link: "#", description: "Relax on pristine beaches and snorkel in crystal-clear waters on a tropical island-hopping adventure." },
+    { title: "Moroccan Desert Safari", image: '/images/moroccan.jpeg', price: 1599, rating: 4.6, link: "#", description: "Explore the vibrant souks and majestic dunes of Morocco on a thrilling desert safari." },
   ]
 
   const customerFeedback = [

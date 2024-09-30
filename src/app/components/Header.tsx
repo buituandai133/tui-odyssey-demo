@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { Sun, Moon, Globe, Menu, X, Home, Package, Users, Mail } from 'lucide-react'
-import logo from '@/static/logo.png'
 import Image from 'next/image'
 
 export default function Header() {
@@ -48,7 +47,7 @@ export default function Header() {
       }`}>
         <div className="container mx-auto flex justify-between items-center px-4 py-4">
           <Link href="/" className="text-2xl font-bold">
-          <Image src={logo} height={40} alt='logo' />
+          <Image src={'/images/logo.png'} height={40} width={91} alt='logo' />
         </Link>
           
           {/* Desktop Navigation */}

@@ -1,9 +1,4 @@
 import Image from 'next/image'
-import tuigroup from '@/static/tuigroup.png'
-import iso9001 from '@/static/iso-9001.jpg'
-import iso14001 from '@/static/iso14001.jpeg'
-import travelife from '@/static/travelife.png'
-import iata from '@/static/iata.png'
 
 export default function About() {
   return (
@@ -22,7 +17,7 @@ export default function About() {
           <h2 className="text-3xl font-bold mb-8 text-center text-teal-600 dark:text-teal-400">Our History</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <Image src={tuigroup} alt="Company History" width={600} height={400} className="rounded-lg shadow-lg" />
+              <Image src={'/images/tuigroup.png'} alt="Company History" width={600} height={400} className="rounded-lg shadow-lg" />
             </div>
             <div>
               <h3 className="text-2xl font-semibold mb-4 text-teal-600 dark:text-teal-400">A Journey Through Time</h3>
@@ -64,19 +59,19 @@ export default function About() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[{
                 name: 'ISO-9001',
-                image: iso9001,
+                image: '/images/iso-9001.jpg',
                 description: 'ISO 9001 is a globally recognized standard for quality management systems. It ensures that our processes are efficient, effective, and meet customer requirements.'
               }, {
                 name: 'ISO-14001',
-                image: iso14001,
+                image: '/images/iso14001.jpeg',
                 description: 'ISO 14001 is an internationally recognized standard for environmental management systems. It ensures that our operations are environmentally responsible and sustainable.'
               }, {
                 name: 'Travelife Partner Award',
-                image: travelife,
+                image: '/images/travelife.png',
                 description: 'The Travelife Partner Award recognizes our commitment to sustainability and responsible tourism practices, ensuring a positive impact on local communities and the environment.'
               }, {
                 name: 'IATA',
-                image: iata,
+                image: '/images/iata.png',
                 description: 'IATA (International Air Transport Association) certification recognizes our expertise in air travel and our commitment to providing high-quality services to our customers.'
               }].map(({ name, description, image }) => (
               <div key={name} className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">

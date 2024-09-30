@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
 import Image from 'next/image'
-import logo from '@/static/logo.png'
 
 export default function Footer() {
   return (
@@ -10,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="text-center md:text-left">
             <h3 className="text-lg font-semibold mb-4 text-teal-500 dark:text-teal-400">
-              <Link href="/"><Image src={logo} height={40} alt='logo' className="mx-auto md:mx-0" /></Link>
+              <Link href="/"><Image src={'/images/logo.png'} height={40} width={91} alt='logo' className="mx-auto md:mx-0" /></Link>
             </h3>
             <p>Discover Your Smile</p>
             <p>Experience Unforgettable Holidays with TUI</p>

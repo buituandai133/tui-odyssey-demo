@@ -1,12 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Users, Package, Plane, Percent } from 'lucide-react'
-import family from '@/static/family.jpg'
-import friend from '@/static/friend.jpg'
-import student from '@/static/student.jpg'
-import bali from '@/static/bali.jpeg'
-import tuiCruise from '@/static/tui-cruise.jpg'
-import maldives from '@/static/maldives.jpg'
 
 export default function Home() {
   return (
@@ -29,9 +23,9 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-blue-500 dark:from-teal-400 dark:to-blue-400">Our Experiences</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {[
-              { title: 'Family Adventures', description: 'Create lasting memories with your loved ones.', image: family },
-              { title: 'Friend Getaways', description: 'Unforgettable trips with your best buddies.', image: friend },
-              { title: 'Student Explorations', description: 'Educational and fun tours for students.', image: student }
+              { title: 'Family Adventures', description: 'Create lasting memories with your loved ones.', image: '/images/family.jpg' },
+              { title: 'Friend Getaways', description: 'Unforgettable trips with your best buddies.', image: '/images/friend.jpg' },
+              { title: 'Student Explorations', description: 'Educational and fun tours for students.', image: '/images/student.jpg' }
             ].map((experience, index) => (
               <div key={index} className="group relative overflow-hidden rounded-xl aspect-[4/3]">
                 <Image 
@@ -59,15 +53,15 @@ export default function Home() {
             {[{
                 name: 'Explore Bali',
                 description: 'Discover Bali\'s lush landscapes, crystal-clear waters, ancient temples, and warm hospitality.',
-                image: bali
+                image: '/images/bali.jpeg'
               }, {
                 name: 'Around the World',
                 description: 'Embark on a journey of a lifetime with Mein Schiff cruise, exploring the world\'s most breathtaking destinations in style and comfort.',
-                image: tuiCruise
+                image: '/images/tui-cruise.jpg'
               }, {
                 name: 'Maldives Getaway',
                 description: 'Escape to a tropical paradise with crystal-clear waters, pristine beaches, and luxurious resorts.',
-                image: maldives
+                image: '/images/maldives.jpg'
               }].map(({name, description, image}, idx) => (
               <div key={idx} className="group relative overflow-hidden rounded-xl aspect-[4/3]">
                 <Image 
