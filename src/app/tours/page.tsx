@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Image, { StaticImageData } from 'next/image'
 import { Star, Clock } from 'lucide-react'
 import paris from '@/static/paris.jpg'
-import tokyo from '@/static/tokyo.jpg'
+import tokyo from '@/static/tokyo.jpeg'
 import newyork from '@/static/newyork.jpg'
 import bali from '@/static/bali-tour.jpg'
 import africa from '@/static/africa.jpg'
@@ -17,7 +17,7 @@ import northlight from '@/static/northlight.jpg'
 import australia from '@/static/australia.jpg'
 import incatrail from '@/static/incatrail.jpg'
 import maldiveshopping from '@/static/maldiveshopping.jpg'
-import moroccan from '@/static/moroccan.jpg'
+import moroccan from '@/static/moroccan.jpeg'
 
 interface TourCardProps {
   title: string;

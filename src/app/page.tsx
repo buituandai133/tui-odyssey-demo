@@ -4,7 +4,7 @@ import { ArrowRight, Users, Package, Plane, Percent } from 'lucide-react'
 import family from '@/static/family.jpg'
 import friend from '@/static/friend.jpg'
 import student from '@/static/student.jpg'
-import bali from '@/static/bali.jpg'
+import bali from '@/static/bali.jpeg'
 import tuiCruise from '@/static/tui-cruise.jpg'
 import maldives from '@/static/maldives.jpg'
 

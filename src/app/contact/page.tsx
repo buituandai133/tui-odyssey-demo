@@ -80,7 +80,7 @@ export default function ContactUs() {
       </section>
 
       {/* New Full-width CTA Section */}
-      <section className="relative bg-cover bg-center py-24" style={{ backgroundImage: 'url(/images/dive.jpg)', filter: 'brightness(120%)' }}>
+      <section className="relative bg-cover bg-center py-24" style={{ backgroundImage: 'url(/images/dive.jpeg)', filter: 'brightness(120%)' }}>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative container mx-auto text-center text-white z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Ready for Your Next Adventure?</h2>
