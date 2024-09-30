@@ -34,13 +34,13 @@ export default function About() {
                   <span className="font-bold mr-2 text-teal-500 dark:text-teal-400">1968:</span> The company began its venture into tourism by acquiring a travel agency, Hummel Reise.
                 </li>
                 <li className="flex items-start">
-                  <span className="font-bold mr-2 text-teal-500 dark:text-teal-400">1997:</span> Preussag's strategic shift was completed by fully focusing on the tourism industry, acquiring multiple travel and tour operators.
+                  <span className="font-bold mr-2 text-teal-500 dark:text-teal-400">1997:</span> Preussag\'s strategic shift was completed by fully focusing on the tourism industry, acquiring multiple travel and tour operators.
                 </li>
                 <li className="flex items-start">
                   <span className="font-bold mr-2 text-teal-500 dark:text-teal-400">2002:</span> The company rebranded as TUI AG, reflecting its transformation into a global tourism leader.
                 </li>
                 <li className="flex items-start">
-                  <span className="font-bold mr-2 text-teal-500 dark:text-teal-400">2014:</span> TUI Travel PLC, a UK-based subsidiary, merged with its parent company, TUI AG, forming the world's largest leisure, travel, and tourism company.
+                  <span className="font-bold mr-2 text-teal-500 dark:text-teal-400">2014:</span> TUI Travel PLC, a UK-based subsidiary, merged with its parent company, TUI AG, forming the world\'s largest leisure, travel, and tourism company.
                 </li>
                 <li className="flex items-start">
                   <span className="font-bold mr-2 text-teal-500 dark:text-teal-400">2018:</span> TUI continued to expand by investing in cruises, hotels, and sustainable tourism ventures.

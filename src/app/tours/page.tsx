@@ -30,7 +30,7 @@ interface TourCardProps {
 }
 
 const TourCard = ({ title, image, price, originalPrice, rating, description, link }: TourCardProps) => (
-  <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+  <a href={link} className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
     <div className="relative">
       <Image src={image} alt={title} width={400} height={300} className="w-full h-48 object-cover transition duration-500 ease-in-out hover:scale-105" />
     </div>
@@ -46,7 +46,7 @@ const TourCard = ({ title, image, price, originalPrice, rating, description, lin
       </div>
       <p className="mt-2 text-gray-600 dark:text-gray-300 line-clamp-2 overflow-hidden">{description}</p>
     </div>
-  </div>
+  </a>
 )
 
 type TimeDiff = {
