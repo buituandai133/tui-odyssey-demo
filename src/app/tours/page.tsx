@@ -29,9 +29,12 @@ interface TourCardProps {
   link: string;
 }
 
-const TourCard = ({ title, image, price, originalPrice, rating, description, link }: TourCardProps) => (
-  <a href={link} className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+const TourCard = ({ title, image, price, originalPrice, rating, description, link, endTime }: TourCardProps & { endTime?: string }) => (
+  <a href={link} className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 relative">
     <div className="relative">
+      {endTime && <div className="absolute top-0 right-0 p-2 bg-red-500 text-white text-sm z-10">
+        <CountdownTimer endTime={endTime} />
+      </div>}
       <Image src={image} alt={title} width={400} height={300} className="w-full h-48 object-cover transition duration-500 ease-in-out hover:scale-105" />
     </div>
     <div className="p-4">
@@ -155,12 +158,7 @@ export default function Tours() {
             <h2 className="text-3xl font-bold mb-8 text-gray-800 dark:text-gray-200">Flash Sales</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {flashSales.map((tour, index) => (
-                <div key={index} className="relative">
-                  <TourCard {...tour} />
-                  <div className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-md">
-                    <CountdownTimer endTime={tour.endTime} />
-                  </div>
-                </div>
+                <TourCard {...tour} />
               ))}
             </div>
           </div>
