@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import { Star, Clock } from 'lucide-react'
 
 interface TourCardProps {
